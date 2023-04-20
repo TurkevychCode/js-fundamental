@@ -131,42 +131,42 @@
 // За кожне третє запізнення Васю штрафують на 20$. Реалізувати меню :
 
 // користувач вводить бажаний дохід Васі і кількість запізнень, порахувати, скільки рядків коду йому треба написати
-let rate = 50;
-let latePenalty = 20;
-
-const desiredIncome = +prompt('What is Vasia desired income?');
-const numDelays = +prompt('How late are you?')
-
-function calculateLine(desiredIncome, numDelays) {
-    let totalIncome = desiredIncome + (numDelays * latePenalty);
-    return Math.floor((totalIncome / rate) * 100);
-}
-
-const resultVasia = calculateLine(desiredIncome, numDelays);
-console.log(resultVasia)
-
-// користувач вводить кількість рядків коду, написану Васею, і бажаний обсяг коштів. Порахувати, скільки разів Вася може запізнитися.
-
-const numberOfLines = +prompt('The number of lines written by Vasia');
-const desiredIncomeForDelays = +prompt('What is Vasia desired income?');
-
-function calculateDelays(linesOfCode, desiredIncome) {
-    let totalIncome = (linesOfCode / 100) * rate;
-    return Math.floor((totalIncome - desiredIncome) / latePenalty)
-}
-
-const resultVasia2 = calculateDelays(numberOfLines,desiredIncomeForDelays);
-console.log(resultVasia2)
-
-// користувач вводить кількість рядків коду і кількість запізнень, визначити, скільки грошей заплатять Васі і чи заплатять взагалі.
-const numberOfLinesForPayment = +prompt('The number of lines written by Vasia?');
-const numDelaysForPayment = +prompt('How late are you?')
-function calculatePayment (numberOfLines, numDelays){
-    let totalIncome = (numberOfLines / 100) * rate;
-    let penalty = Math.floor(numDelays / 3) * latePenalty;
-    let totalPayment = totalIncome - penalty;
-    let willGetPaid = (totalPayment >= 0);
-    return {totalPayment,willGetPaid}
-}
-const resultVasia3 = calculatePayment(numberOfLinesForPayment,numDelaysForPayment);
-console.log(resultVasia3)
+// let rate = 50;
+// let latePenalty = 20;
+//
+// const desiredIncome = +prompt('What is Vasia desired income?');
+// const numDelays = +prompt('How late are you?')
+//
+// function calculateLine(desiredIncome, numDelays) {
+//     let totalIncome = desiredIncome + (numDelays * latePenalty);
+//     return Math.floor((totalIncome / rate) * 100);
+// }
+//
+// const resultVasia = calculateLine(desiredIncome, numDelays);
+// console.log(resultVasia)
+//
+// // користувач вводить кількість рядків коду, написану Васею, і бажаний обсяг коштів. Порахувати, скільки разів Вася може запізнитися.
+//
+// const numberOfLines = +prompt('The number of lines written by Vasia');
+// const desiredIncomeForDelays = +prompt('What is Vasia desired income?');
+//
+// function calculateDelays(linesOfCode, desiredIncome) {
+//     let totalIncome = (linesOfCode / 100) * rate;
+//     return Math.floor((totalIncome - desiredIncome) / latePenalty)
+// }
+//
+// const resultVasia2 = calculateDelays(numberOfLines,desiredIncomeForDelays);
+// console.log(resultVasia2)
+//
+// // користувач вводить кількість рядків коду і кількість запізнень, визначити, скільки грошей заплатять Васі і чи заплатять взагалі.
+// const numberOfLinesForPayment = +prompt('The number of lines written by Vasia?');
+// const numDelaysForPayment = +prompt('How late are you?')
+// function calculatePayment (numberOfLines, numDelays){
+//     let totalIncome = (numberOfLines / 100) * rate;
+//     let penalty = Math.floor(numDelays / 3) * latePenalty;
+//     let totalPayment = totalIncome - penalty;
+//     let willGetPaid = (totalPayment >= 0);
+//     return {totalPayment,willGetPaid}
+// }
+// const resultVasia3 = calculatePayment(numberOfLinesForPayment,numDelaysForPayment);
+// console.log(resultVasia3)
