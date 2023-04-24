@@ -13,7 +13,7 @@
 // console.log(res1); // ""12""
 // console.log(typeof res1); // ""string""
 //
-// let res2 = 'true' + y;// Допишіть код, необхідно використовувати змінні x і y
+// let res2 = !!x + String(y);// Допишіть код, необхідно використовувати змінні x і y
 // console.log(res2); // ""true2""
 // console.log(typeof res2); // ""string""
 //
@@ -89,42 +89,23 @@
 //
 // const date2 = Date.now();
 // const hours2 = Math.floor(date2 / (1000 * 60 * 60) % 24);
-// switch (hours2) {
-//     case 5:
-//     case 6:
-//     case 7:
-//     case 8:
-//     case 9:
-//     case 10:
+// switch (true) {
+//     case (hours2 >= 5 && hours2 < 11):
 //         console.log('Доброго ранку');
 //         break;
-//     case 11:
-//     case 12:
-//     case 13:
-//     case 14:
-//     case 15:
-//     case 16:
+//     case (hours2 >= 11 && hours2 < 17):
 //         console.log('Доброго дня');
 //         break;
-//     case 17:
-//     case 18:
-//     case 19:
-//     case 20:
-//     case 21:
-//     case 22:
+//     case (hours2 >= 17 && hours2 < 23):
 //         console.log('Доброго вечора');
 //         break;
-//     case 23:
-//     case 0:
-//     case 1:
-//     case 2:
-//     case 3:
-//     case 4:
+//     case (hours2 >= 23 || hours2 < 5):
 //         console.log('Доброї ночі');
 //         break;
 //     default:
 //         console.log('Неправильний час')
 // }
+
 
 // (Ускладнене. Задача не оцінюється. Для тих, кому хочеться поробити ще щось)
 // Вася працює програмістом і отримує 50$ за кожні 100 рядків коду(99 рядків - 0$, 199 рядків - 50$).

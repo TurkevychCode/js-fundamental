@@ -127,14 +127,14 @@
 // const tom = create("pass_for_Tom");
 // tom("pass_for_Tom"); //повертає true
 // tom("pass_for_tom"); //повертає false
-
-function create(arg){
-    return function (value){
-        return value === arg;
-    };
-}
-
-const tom = create('pass_for_Tom');
-console.log(tom);
-console.log(tom('pass_for_Tom'));
-console.log(tom('pass_for_tom'));
+//
+// function create(arg){
+//     return function (value){
+//         return value === arg;
+//     };
+// }
+//
+// const tom = create('pass_for_Tom');
+// console.log(tom);
+// console.log(tom('pass_for_Tom'));
+// console.log(tom('pass_for_tom'));
