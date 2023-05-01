@@ -6,7 +6,7 @@
 // function sumSliceArray (arr, first, second){
 //     for (let i = 0; i < arr.length; i++) {
 //         const resultElement = arr[i];
-//         if (typeof resultElement === 'string' || typeof resultElement === 'boolean'){
+//         if (isNaN(resultElement)){
 //             alert('Incorrect data!')
 //         }else {
 //             return arr[first - 1] + arr[second - 1];
@@ -25,15 +25,12 @@
 // function checkAge(){
 //     try {
 //         const name = prompt('Enter your name').toLocaleLowerCase();
-//
 //         const age = +prompt('Enter your age');
-//         if (isNaN(age)) alert('Incorrect age!');
-//
 //         const status = prompt('Please enter your status (admin,moderator,user)').toLocaleLowerCase();
+//
+//         if (isNaN(age)) alert('Incorrect age!');
 //         if (status !== 'admin' && status !== 'moderator' && status !== 'user') throw new EvalError('Incorrect status!');
-//
 //         if(!name && !age && !status) throw new Error('The field is empty! Please enter your name, age, status!')
-//
 //         const parseAge = Math.round(age);
 //         if (parseAge < 18 || parseAge > 70) throw new RangeError('Age must be between 18 and 70!');
 //
@@ -106,23 +103,23 @@
 // // Error: ID must not be negative: -12
 // // [ {id: 7}, {id: 44}, {id: 22} ]
 
-function showUser(id) {
-    if (id < 0) {
-        throw new Error(`ID must not be negative: ${id}`)
-    }
-    return id;
-}
-function showUsers(ids) {
-    const result = [];
-    for (const id of ids) {
-        try {
-            const user = showUser(id);
-            result.push(user);
-        } catch (error) {
-            console.error(error.message)
-        }
-    }
-    return result;
-}
-const result = showUsers([12,43,31,-3,12,23]);
-console.log(result);
+// function showUser(id) {
+//     if (id < 0) {
+//         throw new Error(`ID must not be negative: ${id}`)
+//     }
+//     return id;
+// }
+// function showUsers(ids) {
+//     const result = [];
+//     for (const id of ids) {
+//         try {
+//             const user = showUser(id);
+//             result.push({id:user});
+//         } catch (error) {
+//             console.error(error.message)
+//         }
+//     }
+//     return result;
+// }
+// const result = showUsers([12,43,31,-3,12,23]);
+// console.log(result);
