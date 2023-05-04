@@ -224,55 +224,55 @@
 // Andy Ander: 1000.5
 // Tom Tomson: 1584
 
-class Worker {
-    #experience = 1.2;
-
-    constructor(fullName,dayRate,workingDays) {
-        this.fullName = fullName;
-        this.dayRate = dayRate;
-        this.workingDays = workingDays;
-        this.#experience = 1.2;
-    }
-    showSalary(){
-        console.log(`${this.fullName} receives per month: ${this.dayRate * this.workingDays}`)
-    }
-    getSalaryWithExperience() {
-        return this.dayRate * this.workingDays * this.#experience;
-    }
-    showSalaryWithExperience(){
-        let salaryWithExperience = this.dayRate * this.workingDays * this.#experience;
-        console.log(`${this.fullName} receives per month, taking into account the additional experience factor:
-        ${salaryWithExperience}`);
-    }
-    get experience (){
-        console.log(this.#experience)
-    }
-    set experience(value){
-        if (value < 1){
-            console.log('experience cannot be less than 1');
-        }
-        this.#experience = value
-    }
-}
-const worker1 = new Worker('Vitali',12,30);
-const worker2 = new Worker('Oleh',7,30);
-const worker3 = new Worker('Anton',24,30);
-
-worker1.experience = 2;
-worker2.experience = 1.2;
-worker3.experience = 1.6;
-
-worker1.showSalary();
-worker1.showSalaryWithExperience();
-worker2.showSalary();
-worker2.showSalaryWithExperience();
-worker3.showSalary();
-worker3.showSalaryWithExperience();
-
-const workers = [worker1, worker2, worker3];
-function sortWorkers(workers){
-    workers.sort((a,b)=> a.getSalaryWithExperience() - b.getSalaryWithExperience());
-    workers.forEach(worker => console.log(`${worker.fullName}: ${worker.getSalaryWithExperience()}`));
-}
-sortWorkers(workers)
+// class Worker {
+//     #experience = 1.2;
+//
+//     constructor(fullName,dayRate,workingDays) {
+//         this.fullName = fullName;
+//         this.dayRate = dayRate;
+//         this.workingDays = workingDays;
+//         this.#experience = 1.2;
+//     }
+//     showSalary(){
+//         console.log(`${this.fullName} receives per month: ${this.dayRate * this.workingDays}`)
+//     }
+//     getSalaryWithExperience() {
+//         return this.dayRate * this.workingDays * this.#experience;
+//     }
+//     showSalaryWithExperience(){
+//         let salaryWithExperience = this.dayRate * this.workingDays * this.#experience;
+//         console.log(`${this.fullName} receives per month, taking into account the additional experience factor:
+//         ${salaryWithExperience}`);
+//     }
+//     get experience (){
+//         console.log(this.#experience)
+//     }
+//     set experience(value){
+//         if (value < 1){
+//             console.log('experience cannot be less than 1');
+//         }
+//         this.#experience = value
+//     }
+// }
+// const worker1 = new Worker('Vitali',12,30);
+// const worker2 = new Worker('Oleh',7,30);
+// const worker3 = new Worker('Anton',24,30);
+//
+// worker1.experience = 2;
+// worker2.experience = 1.2;
+// worker3.experience = 1.6;
+//
+// worker1.showSalary();
+// worker1.showSalaryWithExperience();
+// worker2.showSalary();
+// worker2.showSalaryWithExperience();
+// worker3.showSalary();
+// worker3.showSalaryWithExperience();
+//
+// const workers = [worker1, worker2, worker3];
+// function sortWorkers(workers){
+//     workers.sort((a,b)=> a.getSalaryWithExperience() - b.getSalaryWithExperience());
+//     workers.forEach(worker => console.log(`${worker.fullName}: ${worker.getSalaryWithExperience()}`));
+// }
+// sortWorkers(workers)
 

@@ -103,23 +103,23 @@
 // // Error: ID must not be negative: -12
 // // [ {id: 7}, {id: 44}, {id: 22} ]
 
-function showUser(id) {
-    if (id < 0) {
-        throw new Error(`ID must not be negative: ${id}`)
-    }
-    return {id};
-}
-function showUsers(ids) {
-    const result = [];
-    for (const id of ids) {
-        try {
-            const user = showUser(id);
-            result.push(user);
-        } catch (error) {
-            console.error(error.message)
-        }
-    }
-    return result;
-}
-const result = showUsers([12,43,31,-3,12,23]);
-console.log(result);
+// function showUser(id) {
+//     if (id < 0) {
+//         throw new Error(`ID must not be negative: ${id}`)
+//     }
+//     return {id};
+// }
+// function showUsers(ids) {
+//     const result = [];
+//     for (const id of ids) {
+//         try {
+//             const user = showUser(id);
+//             result.push(user);
+//         } catch (error) {
+//             console.error(error.message)
+//         }
+//     }
+//     return result;
+// }
+// const result = showUsers([12,43,31,-3,12,23]);
+// console.log(result);
