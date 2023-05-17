@@ -22,10 +22,10 @@
 // 4.На HTML-сторінці є 6 чекбоксів. Напишіть скріпт,
 //який після того, як користувач позначив будь-які 3 чекбокси, всі чекбокси робить неактивними.
 
-let checkBox = $('input[type="checkbox"]');
-checkBox.on('click',function (){
-    let checked = checkBox.filter(':checked').length
-    if (checked >= 3){
-        checkBox.prop('disabled',true)
-    }
-})
+// let checkBox = $('input[type="checkbox"]');
+// checkBox.on('click',function (){
+//     let checked = checkBox.filter(':checked').length
+//     if (checked >= 3){
+//         checkBox.prop('disabled',true)
+//     }
+// })

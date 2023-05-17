@@ -81,16 +81,16 @@
 // false
 // //1, 1, 3
 
-function checkLogin(login){
-    const regex = /^[a-zA-Z]{1}[a-zA-Z0-9\.]{1,9}$/;
-    const numbers = /[0-9\.]+/g;
-    const resultNumber = login.match(numbers)
-    const result = regex.test(login)
-    console.log(login, result, resultNumber)
-
-}
-checkLogin('ee1.1ret3'); //true
-checkLogin('ee1*1ret3'); //false
+// function checkLogin(login){
+//     const regex = /^[a-zA-Z]{1}[a-zA-Z0-9\.]{1,9}$/;
+//     const numbers = /[0-9\.]+/g;
+//     const resultNumber = login.match(numbers)
+//     const result = regex.test(login)
+//     console.log(login, result, resultNumber)
+//
+// }
+// checkLogin('ee1.1ret3'); //true
+// checkLogin('ee1*1ret3'); //false
 
 
 
