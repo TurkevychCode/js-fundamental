@@ -114,11 +114,11 @@
 //     який резолвиться поточним значенням числа-лічильника циклу і, яке виводиться через час time мілісекунд.
 //
 //     Приклад  роботи:
-const delay = (i, time) => new Promise(resolve => setTimeout(() => resolve(i), time));
-async function showNumbers() {
-    for (let i = 0; i <= 10; i++) {
-        await delay(i,Math.random() * 1000)
-        console.log(i)
-    }
-}
-showNumbers();
+// const delay = (i, time) => new Promise(resolve => setTimeout(() => resolve(i), time));
+// async function showNumbers() {
+//     for (let i = 0; i <= 10; i++) {
+//         await delay(i,Math.random() * 1000)
+//         console.log(i)
+//     }
+// }
+// showNumbers();
